@@ -40,5 +40,6 @@ describe('example to-do app', () => {
         cy.contains('Forgotten Password').click()
         cy.get('#input-email').type('codelanguage101@gmail.com')
         cy.get('[value="Continue"]').click()
+        cy.get('content > h1').should('have.text', "An email with a confirmation link has been sent your email address.")
     })
 })
