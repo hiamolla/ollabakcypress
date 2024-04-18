@@ -27,5 +27,5 @@ describe('example to-do app', () => {
         cy.get('[value="Login"]').click()
         cy.get('.alert').should('have.text', "Warning: No match for E-Mail Address and/or Password.")
     })
-})
+}) 
 
