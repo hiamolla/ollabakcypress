@@ -4,12 +4,12 @@ describe('example to-do app', () => {
         cy.visit('https://tutorialsninja.com/demo/')
     })
 
-    it('Verify the user is able to search for item available on the website', () => {
+    it('Verify the user is able to search for an item available on the website', () => {
         cy.get("[placeholder='Search']").type("MacBook");
         cy.get('.input-group-btn > .btn > .fa').click()
     })
 
-    it('Verify the user is unable to search for item not available on the website', () => {
+    it('Verify the user is unable to search for an item not available on the website', () => {
         cy.get("[placeholder='Search']").type("Shoes");
         cy.get('.input-group-btn > .btn > .fa').click()
         cy.get('#content > h2').should('have.text', "Products meeting the search criteria")
